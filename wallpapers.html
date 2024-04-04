@@ -1,0 +1,96 @@
+
+/* old version of wallpapers, new responsive wallpaper layout on food.html */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpapers</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="banner" style="background-image: url('images/wall1.png');"></div>
+    <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="graphics.html">Graphics</a>
+            <a href="food.html">Food</a>
+            <a href="wallpapers.html">Wallpapers</a> <!-- Added link to wallpapers.html -->
+        </div>
+        
+<h1> *  Wallpapers for phone  *</h1>
+  
+        <style>
+
+             /* Center the table */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh; /* Adjust as needed */
+            margin-top: 400px; /* Add top margin to create space */
+        }
+            
+            /* Remove borders and spacing from the table */
+            table {
+                border-collapse: collapse;
+                border: none;
+            }
+            
+            /* Remove borders from table cells */
+            td {
+                border: none;
+                padding: 10px;
+            }
+            
+            /* Ensure images fill the cell */
+            img {
+                display: block;
+                width: 300px;
+                height: auto;
+            }
+
+            .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Remove underline from anchor tags */
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <div class="container"> <!-- This div should have the container class -->
+        <table>
+            <tr>
+                <td><img src="images/Astrophysicistmotivationalwallpaper.jpg" alt="Image 1"></td>
+                <td><img src="images/Medicaldegreemotivationwallpaper.jpg" alt="Image 2"></td>
+                <td><img src="images/Studymotivationwallpaper.jpg" alt="Image 3"></td>
+                <td><img src="images/Astrophysicistmotivationalwallpaper.jpg" alt="Image 1"></td>
+            </tr>
+            <tr>
+                <td><img src="images/Studymotivationwallpaper.jpg" alt="Image 4"></td>
+                <td><img src="blog stuff/genovese star.jpg" alt="Image 5"></td>
+                <td><img src="blog stuff/cake and coffee ikea.jpg" alt="Image 6"></td>
+                <td><img src="images/Astrophysicistmotivationalwallpaper.jpg" alt="Image 1"></td>
+            </tr>
+            <tr>
+                <td><img src="blog stuff/chicken nuggets ikea.jpg" alt="Image 7"></td>
+                <td><img src="blog stuff/dal and pbm ikea.jpg" alt="Image 8"></td>
+                <td><img src="blog stuff/chicken popcorn.jpg" alt="Image 9"></td>
+                <td><img src="images/Astrophysicistmotivationalwallpaper.jpg" alt="Image 1"></td>
+            </tr>
+        </table>
+
+
+</body>
+</html>
