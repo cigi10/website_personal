@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aube-My_Art</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+    background-color: #F7F5EB;
+
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020202;
+    padding: 10px 20px;
+  }
+  .navbar-logo {
+    font-size: 24px;
+    color: #E9D9C6;
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+  }
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #E9D9C6;
+    border-radius: 20px; /* Rounded corners */
+    padding: 8px 12px;
+    background-color: #E1585C;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensures button shape */
+    margin-right: 10px; /* Space between buttons */
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+  }
+  .navbar-links a:last-child {
+    margin-right: 0; /* No margin for last button */
+  }
+  .navbar-links a:hover {
+    background-color: #B43C3C;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+      width: 50%;
+    }
+
+    .oval-button {
+      padding: 8px 12px; /* Adjusted padding for oval shape on smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .navbar-links {
+      width: 70%;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">Your Logo</div>
+    <div class="navbar-links">
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html">Home</a>
+      <a href="food.html">Food</a>
+    </div>
+  </nav>
+
+
+  <style>
+  
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+    
+    .row {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create four equal columns that sits next to each other */
+    .column {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    </style>
+    <body>
+    
+      
+    
+    <!-- Photo Grid -->
+    <div class="row"> 
+      <div class="column">
+        <img src="my_art/alien_girl.png" style="width:100%">
+        <img src="my_art/happy_guy.jpg" style="width:100%">
+        <img src="my_art/sequin.jpeg" style="width:100%">
+
+      </div>
+
+      <div class="column">
+        <img src="my_art/train.png" style="width:100%">
+        <img src="my_art/green_scene.png" style="width:100%">
+        <img src="my_art/kakyoin_1.png" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="my_art/girl_sunglasses.png" style="width:100%">
+        <img src="my_art/quilling_basic_earings.jpeg" style="width:100%">
+        <img src="my_art/retro_cafe.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="my_art/dragon_oil_pastel.jpeg" style="width:100%">
+        <img src="my_art/mitsuri.png" style="width:100%">   
+        <img src="my_art/mandala_art.jpeg" style="width:100%">
+      </div>
+</div>
+</body>
+</html>

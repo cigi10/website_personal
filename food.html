@@ -1,157 +1,182 @@
-
-/* Responsive layout for a gallery for now - going to be used for wallpapers, pfps and food images */
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aube-Food</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+    background-color: #F7F5EB;
+
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020202;
+    padding: 10px 20px;
+  }
+  .navbar-logo {
+    font-size: 24px;
+    color: #E9D9C6;
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+  }
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #E9D9C6;
+    border-radius: 20px; /* Rounded corners */
+    padding: 8px 12px;
+    background-color: #E1585C;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensures button shape */
+    margin-right: 10px; /* Space between buttons */
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+  }
+  .navbar-links a:last-child {
+    margin-right: 0; /* No margin for last button */
+  }
+  .navbar-links a:hover {
+    background-color: #B43C3C;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+      width: 50%;
+    }
+
+    .oval-button {
+      padding: 8px 12px; /* Adjusted padding for oval shape on smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .navbar-links {
+      width: 70%;
+    }
+  }
+</style>
 </head>
 <body>
-    <div class="banner"></div>
-    <div class="navbar" style="height:auto">
-        <a href="index.html">Home</a>
-        <a href="graphics.html">Graphics</a>
-        <a href="food.html">Food</a>
-        <a href="wallpapers.html">Wallpapers</a> <!-- Added link to wallpapers.html -->
+  <nav class="navbar">
+    <div class="navbar-logo">Your Logo</div>
+    <div class="navbar-links">
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html">Home</a>
+      <a href="food.html">Food</a>
     </div>
-    
+  </nav>
 
-    <style>
+
+  <style>
   
-        * {
-          box-sizing: border-box;
-        }
-        
-        body {
-          margin: 0;
-          font-family: Arial;
-        }
-        
-        .header {
-          text-align: center;
-          padding: 32px;
-        }
-        
-        .row {
-          display: -ms-flexbox; /* IE10 */
-          display: flex;
-          -ms-flex-wrap: wrap; /* IE10 */
-          flex-wrap: wrap;
-          padding: 0 4px;
-        }
-        
-        /* Create four equal columns that sits next to each other */
-        .column {
-          -ms-flex: 25%; /* IE10 */
-          flex: 25%;
-          max-width: 25%;
-          padding: 0 4px;
-        }
-        
-        .column img {
-          margin-top: 8px;
-          vertical-align: middle;
-          width: 100%;
-        }
-        
-        /* Responsive layout - makes a two column-layout instead of four columns */
-        @media screen and (max-width: 800px) {
-          .column {
-            -ms-flex: 50%;
-            flex: 50%;
-            max-width: 50%;
-          }
-        }
-        
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-          .column {
-            -ms-flex: 100%;
-            flex: 100%;
-            max-width: 100%;
-          }
-        }
-        </style>
-        <body>
-        
-          
-        
-        <!-- Photo Grid -->
-        <div class="row"> 
-          <div class="column">
-            <div class="button-overlay">
-              <img src="images/Studymotivationwallpaper.jpg" style="width:100%" onmouseover="downloadImage(this)">
-              <button class="downloadImage">Download</button>
-            </div>
-            <img src="images/Medicaldegreemotivationwallpaper.jpg" style="width:100%">
-            <img src="images/w4.jpg" style="width:100%">
-            <img src="images/Medicaldegreemotivationwallpaper.jpg" style="width:100%">
-            <img src="images/w2.jpg" style="width:100%">
-            <img src="images/w1.jpg" style="width:100%">
-            <img src="images/wall1.png" style="width:100%">
-          </div>
-
-          <div class="column">
-            <img src="blog stuff/cake and coffee ikea.jpg" style="width:100%">
-            <img src="blog stuff/coffee machine ikea.jpg" style="width:100%">
-            <img src="images/w4.jpg" style="width:100%">
-            <img src="blog stuff/genovese star.jpg" style="width:100%">
-            <img src="blog stuff/cover.jpg" style="width:100%">
-            <img src="blog stuff/korean garlic bread.jpg" style="width:100%">
-            <img src="blog stuff/fnaf movie 1.jpg" style="width:100%">
-          </div>
-
-          <div class="column">
-            <img src="images/Studymotivationwallpaper.jpg" style="width:100%">
-            <img src="images/Medicaldegreemotivationwallpaper.jpg" style="width:100%">
-            <img src="images/w4.jpg" style="width:100%">
-            <img src="images/Medicaldegreemotivationwallpaper.jpg" style="width:100%">
-            <img src="images/w2.jpg" style="width:100%">
-            <img src="images/w1.jpg" style="width:100%">
-            <img src="images/wall1.png" style="width:100%">
-          </div>
-
-          <div class="column">
-            <img src="blog stuff/cake and coffee ikea.jpg" style="width:100%">
-            <img src="blog stuff/coffee machine ikea.jpg" style="width:100%">
-            <img src="images/w4.jpg" style="width:100%">
-            <img src="blog stuff/genovese star.jpg" style="width:100%">
-            <img src="blog stuff/cover.jpg" style="width:100%">
-            <img src="blog stuff/korean garlic bread.jpg" style="width:100%">
-            <img src="blog stuff/fnaf movie 1.jpg" style="width:100%">
-          </div>
-</div>
-     <script>
-  $(document).ready(function(){
-  $('#basicModal').hide();
-
-  document.getElementsByClassName('downloadImage').style.visibility = 'hidden';
-});
-</script>
-
-<div class="modal fade" id="basicModal">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h4 class="modal-title" id="title"></h4>
-          </div>
-          <div class="modal-body">
-              <p style="color:white; font-size: 24px; text-align: center; border-radius: 10px;" id="msg"></p>
-                                          
-              <div style="text-align: center;" id="btns">
-              </div>
-          </div>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+    
+    .row {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create four equal columns that sits next to each other */
+    .column {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    </style>
+    <body>
+    
+      
+    
+    <!-- Photo Grid -->
+    <div class="row"> 
+      <div class="column">
+        <img src="blog stuff/cake_and_coffee_ikea.jpg" style="width:100%">
+        <img src="blog stuff/cake_ikea.jpg" style="width:100%">
+        <img src="blog stuff/chicken_nuggets_ikea.jpg" style="width:100%">
+        <img src="blog stuff/chicken_popcorn.jpg" style="width:100%">
+        <img src="blog stuff/coffee_machine_ikea.jpg" style="width:100%">
+        <img src="blog stuff/combo_ikea.jpg" style="width:100%">
       </div>
-  </div>
-</div>   
 
+      <div class="column">
+        <img src="blog stuff/cover.jpg" style="width:100%">
+        <img src="blog stuff/genovese_star_roxie.jpg" style="width:100%">
+        <img src="blog stuff/dal_and_pbm ikea.jpg" style="width:100%">
+        <img src="blog stuff/hakka_noodles_roxie.jpg" style="width:100%">
+        <img src="blog stuff/ice_cream_ikea.jpg" style="width:100%">
+        <img src="blog stuff/ikea tray buy.jpg" style="width:100%">
+        <img src="blog stuff/tiramisu_ikea.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="blog stuff/ikea_symbol.jpg" style="width:100%">
+        <img src="blog stuff/korean_garlic_bread.jpg" style="width:100%">
+        <img src="blog stuff/mocha_drink_ikea.jpg" style="width:100%">
+        <img src="blog stuff/onesta_drinks_1.jpg" style="width:100%">
+        <img src="blog stuff/onesta_drinks_2.jpg" style="width:100%">
+        <img src="blog stuff/onesta_garlic_bread.jpg" style="width:100%">
+        <img src="blog stuff/onesta_pizza_1.jpg" style="width:100%">
+        <img src="blog stuff/refill_ikea.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="blog stuff/onesta_pizza_2.jpg" style="width:100%">
+        <img src="blog stuff/onesta_pizza_3.jpg" style="width:100%">
+        <img src="blog stuff/onesta_pizza_4.jpg" style="width:100%">
+        <img src="blog stuff/onesta_pizza_5.jpg" style="width:100%">
+        <img src="blog stuff/patatas_bravas_roxie.jpg" style="width:100%">
+        <img src="blog stuff/pbm_dal_chicken_curry_combo_ikea.jpg" style="width:100%">
+        <img src="blog stuff/potato_wedges_ikea.jpg" style="width:100%">
+        <img src="blog stuff/trays_ikea.jpg" style="width:100%">
+      </div>
+</div>
 </body>
 </html>

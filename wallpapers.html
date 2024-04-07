@@ -1,96 +1,173 @@
-
-/* old version of wallpapers, new responsive wallpaper layout on food.html */
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallpapers</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aube-Wallpapers</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+    background-color: #F7F5EB;
+
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020202;
+    padding: 10px 20px;
+  }
+  .navbar-logo {
+    font-size: 24px;
+    color: #E9D9C6;
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+  }
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #E9D9C6;
+    border-radius: 20px; /* Rounded corners */
+    padding: 8px 12px;
+    background-color: #E1585C;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensures button shape */
+    margin-right: 10px; /* Space between buttons */
+    font-family: Helvetica, Arial, sans-serif; /* Updated font to Helvetica */
+  }
+  .navbar-links a:last-child {
+    margin-right: 0; /* No margin for last button */
+  }
+  .navbar-links a:hover {
+    background-color: #B43C3C;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+      width: 50%;
+    }
+
+    .oval-button {
+      padding: 8px 12px; /* Adjusted padding for oval shape on smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .navbar-links {
+      width: 70%;
+    }
+  }
+</style>
 </head>
 <body>
-    <div class="banner" style="background-image: url('images/wall1.png');"></div>
-    <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="graphics.html">Graphics</a>
-            <a href="food.html">Food</a>
-            <a href="wallpapers.html">Wallpapers</a> <!-- Added link to wallpapers.html -->
-        </div>
-        
-<h1> *  Wallpapers for phone  *</h1>
+  <nav class="navbar">
+    <div class="navbar-logo">AUBE</div>
+    <div class="navbar-links">
+      <a href="#">Graphics</a>
+      <a href="#">Home</a>
+      <a href="#">Food</a>
+    </div>
+  </nav>
+
+
+  <style>
   
-        <style>
-
-             /* Center the table */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 120vh; /* Adjust as needed */
-            margin-top: 400px; /* Add top margin to create space */
-        }
-            
-            /* Remove borders and spacing from the table */
-            table {
-                border-collapse: collapse;
-                border: none;
-            }
-            
-            /* Remove borders from table cells */
-            td {
-                border: none;
-                padding: 10px;
-            }
-            
-            /* Ensure images fill the cell */
-            img {
-                display: block;
-                width: 300px;
-                height: auto;
-            }
-
-            .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            text-decoration: none; /* Remove underline from anchor tags */
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-        
-        </style>
-    </head>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+    
+    .row {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create four equal columns that sits next to each other */
+    .column {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    </style>
     <body>
-        <div class="container"> <!-- This div should have the container class -->
-        <table>
-            <tr>
-                <td><img src="images/Astrophysicistmotivationalwallpaper.jpg" alt="Image 1"></td>
-                <td><img src="images/Medicaldegreemotivationwallpaper.jpg" alt="Image 2"></td>
-                <td><img src="images/Studymotivationwallpaper.jpg" alt="Image 3"></td>
-                <td><img src="images/Astrophysicistmotivationalwallpaper.jpg" alt="Image 1"></td>
-            </tr>
-            <tr>
-                <td><img src="images/Studymotivationwallpaper.jpg" alt="Image 4"></td>
-                <td><img src="blog stuff/genovese star.jpg" alt="Image 5"></td>
-                <td><img src="blog stuff/cake and coffee ikea.jpg" alt="Image 6"></td>
-                <td><img src="images/Astrophysicistmotivationalwallpaper.jpg" alt="Image 1"></td>
-            </tr>
-            <tr>
-                <td><img src="blog stuff/chicken nuggets ikea.jpg" alt="Image 7"></td>
-                <td><img src="blog stuff/dal and pbm ikea.jpg" alt="Image 8"></td>
-                <td><img src="blog stuff/chicken popcorn.jpg" alt="Image 9"></td>
-                <td><img src="images/Astrophysicistmotivationalwallpaper.jpg" alt="Image 1"></td>
-            </tr>
-        </table>
+    
+      
+    
+    <!-- Photo Grid -->
+    <div class="row"> 
+      <div class="column">
+        <img src="wallpapers_all/astro_physicist_motivational_c_wallpaper.jpg" style="width:100%">
+        <img src="wallpapers_all/Electric_pink_purple_glitch_c_wallpaper.jpeg" style="width:100%">
+        <img src="wallpapers_all/engineering_motivational_c_wallpaper.jpg" style="width:100%">
+        
+        
+        
+      </div>
 
+      <div class="column">
+        <img src="wallpapers_all/gradient_wallpaper_red_2.jpg" style="width:100%">
+        <img src="wallpapers_all/gradient_wallpaper_red_3.jpg" style="width:100%">
+        
+        <img src="wallpapers_all/medical_degree_motivation_c_wallpaper.jpg" style="width:100%">
+        <img src="wallpapers_all/rock_metal_c_wallpaper_blackwhite.jpeg" style="width:100%">
+        
+      </div>
 
+      <div class="column">
+        <img src="wallpapers_all/u_can_do_both_c_wallpaper.jpg" style="width:100%">
+        <img src="wallpapers_all/study_motivation_c_wallpaper_beige.jpeg" style="width:100%">
+        <img src="wallpapers_all/soft_blue_c_wallpaper.jpeg" style="width:100%">        
+        
+    </div>
+
+      <div class="column">
+        <img src="wallpapers_all/gradient_wallpaper_dreamon_blue.png" style="width:100%">
+        <img src="wallpapers_all/gradient_wallpaper_heart_pink.png" style="width:100%">
+        <img src="wallpapers_all/gradient_wallpaper_red_1.jpg" style="width:100%">
+        <img src="wallpapers_all/gradient_wallpaper_red_4.jpg" style="width:100%">
+      </div>
+</div>
 </body>
 </html>

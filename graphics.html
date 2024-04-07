@@ -1,49 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallpapers</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Website Title</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica"; /* Updated font-family */
+    background-color: #F7F5EB;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020202;
+    padding: 10px 20px;
+  }
+  .navbar-logo {
+    font-size: 24px;
+    color: #E9D9C6;
+  }
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #E9D9C6;
+    border-radius: 25px; /* Rounded corners */
+    padding: 16px 32px; /* Increased padding for larger buttons */
+    background-color: #E1585C;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensures button shape */
+    margin-right: 10px; /* Space between buttons */
+  }
+  .navbar-links a:last-child {
+    margin-right: 0; /* No margin for last button */
+  }
+  .navbar-links a:hover {
+    background-color: #B43C3C;
+  }
+
+  /* Style for oval buttons */
+  .oval-button {
+    border-radius: 50px;
+    padding: 16px 32px; /* Increased padding for larger buttons */
+    margin-right: 10px; /* Space between buttons */
+    background-color: #E1585C;
+    color: #E9D9C6;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+
+  .oval-button:last-child {
+    margin-right: 0; /* No margin for last button */
+  }
+
+  .oval-button:hover {
+    background-color: #B43C3C;
+  }
+
+  /* Background image styles */
+  .button-bg {
+    position: relative;
+    display: inline-block;
+    width: 100vw; /* Set image width to 100% of viewport width */
+    height: 100vh; /* Set image height to 100% of viewport height */
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .button-bg img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Cover the entire container */
+    border-radius: 50px; /* Rounded corners */
+  }
+
+  .button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+      width: 50%;
+    }
+
+    .oval-button {
+      padding: 16px 24px; /* Adjusted padding for oval shape on smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .navbar-links {
+      width: 70%;
+    }
+  }
+</style>
 </head>
 <body>
-    <div class="banner"></div>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="graphics.html">Graphics</a>
-        <a href="food.html">Food</a>
-        <a href="wallpapers.html">Wallpapers</a> <!-- Added link to wallpapers.html -->
+  <nav class="navbar">
+    <div class="navbar-logo">AUBE</div>
+    <div class="navbar-links">
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html">Home</a>
+      <a href="food.html">Food</a>
     </div>
-    
-    </div>
-
-
-/* Leads the Page to Various Pages Related to Graphics such as Wallpapers and My art */ 
+  </nav>
   
-<div id="wallpapers-hero" class="hero" style="background-image: url('images/w2.jpg');">
-    
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1>Wallpapers</h1>
-            <p>Discover stunning wallpapers for your desktop or mobile.</p>
-            <a href="wallpapers.html" class="button">View Wallpapers</a>
-        </div>
+  <!-- Wallpaper button with background image -->
+  <div class="button-bg">
+    <img src="website_elements/wallpapers_graphic_bg.svg" alt="Wallpaper Image">
+    <div class="button-container">
+      <a href="wallpapers.html" class="oval-button">Wallpaper</a> <!-- Oval button for Wallpaper -->
     </div>
-</div>
+  </div>
 
-
-<div id="my-art-hero" class="hero" style="background-image: url('images/w1.jpg');">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1>My Art</h1>
-            <p>Explore my collection of artworks and creations.</p>
-            <a href="my-art.html" class="button">View My Art</a>
-        </div>
+  <!-- My Art button with background image -->
+  <div class="button-bg">
+    <img src="website_elements/myart_graphic_bg.svg" alt="My Art Image">
+    <div class="button-container">
+      <a href="myart.html" class="oval-button">My Art</a> <!-- Oval button for My Art -->
     </div>
-</div>
-
-
+  </div>
 
 </body>
 </html>
